@@ -15,8 +15,6 @@ const int echoPin = 13;
 long duration;
 
 
-
-
 void setup() {
    test1.attach(servo1);
    test2.attach(servo2);
@@ -26,9 +24,6 @@ void setup() {
    Serial.begin(9600);
 }
 
-
-
- 
 int i=180;
 
 void loop() {
