@@ -11,13 +11,13 @@ int echoPin=11;
 
 long duration;
 int distance;
-int ch1;
+int ch3;//because we use ch3 for normal cases of throttle
 int servopin=9;
 
 void setup() {
 pinMode(trigPin, OUTPUT);
 pinMode(echoPin, INPUT); 
-pinMode(ch1,INPUT);
+pinMode(ch3,INPUT);
 pinMode(servopin,OUTPUT);
 quad.attach(servopin);
 
@@ -44,13 +44,13 @@ distance= duration*0.034/2;
 //Serial.print(": ");
 //Serial.println(distance);
      
- ch1 = pulseIn(5, HIGH, 25000); // Read the pulse width of the channel
-ch1= constrain(ch1,1100,1920);
+ ch3 = pulseIn(5, HIGH, 25000); // Read the pulse width of the channel
+ch3= constrain(ch3,1100,1920);
  
-  Serial.println(ch1);
+  Serial.println(ch3);
   if(distance>30)
   {
-    quad.write(ch1); // Write output from transmitter to the motor
+    quad.write(ch3); // Write output from transmitter to the motor
     
   }
 else if(distance<30)
