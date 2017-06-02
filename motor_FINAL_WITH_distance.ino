@@ -21,7 +21,7 @@ pinMode(ch1,INPUT);
 pinMode(servopin,OUTPUT);
 quad.attach(servopin);
 
-/* Intialize the motors with the minimum input value
+/* Intialize the motors with the minimum input value*/
 quad.writeMicroseconds(1100); 
 Serial.begin(9600);
 }
